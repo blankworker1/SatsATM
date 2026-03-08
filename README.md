@@ -19,7 +19,7 @@ Coins → HX-916 → PC817 → ESP32 → Blink API → Lightning payment
 3. ESP32 connects to the internet, fetches the EUR→sat rate and starting wallet balance
 4. Machine is ready — buyer inserts coins, scans the QR, receives sats
 
-[Link to Demo version](
+[Link to Demo version](https://github.com/blankworker1/SATS_ATM/coin_atm_demo.html)
 
 ---
 
