@@ -30,6 +30,7 @@ Coins → HX-916 → PC817 → ESP32 → Blink API → visitor's Blink wallet
 | `config.h` | Hardware constants and timing values |
 | `ui.h` | Tablet UI embedded as PROGMEM string — served by ESP32 |
 | `coin_atm_esp32.html` | Source for the tablet UI (edit this, then rebuild `ui.h`) |
+|`blink-lookup.html` | Browser tool — paste API key to retrieve correct Wallet ID |
 | `README.md` | This file |
 
 ---
