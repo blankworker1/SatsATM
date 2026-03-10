@@ -172,7 +172,7 @@ query {
 }
 ```
 
-Or open `blink-lookup.html` (available separately) in a browser — paste your API key and it returns the correct wallet ID with one click.
+Or open [`blink-lookup.html`](https://blankworker1.github.io/balanceATM/blink-lookup.html) in a browser — paste your API key and it returns the correct wallet ID with one click.
 
 > ⚠️ The wallet is a **treasury** — sats flow out to visitors. The operator collects the physical coins as revenue. Monitor the wallet balance during events using the on-screen fuel gauge.
 
