@@ -2,14 +2,8 @@
 // ═══════════════════════════════════════════════════════════════
 //  ui.h  —  Tablet UI served by the ESP32 web server
 //
-//  Generated from coin_atm_esp32_new.html
+//  Generated from coin_atm_esp32.html
 //  Stored in PROGMEM (flash) — does not consume RAM at runtime
-//
-//  Usage in main.ino:
-//    #include "ui.h"
-//    server.on("/", HTTP_GET, []() {
-//      server.send(200, "text/html", getUI());
-//    });
 // ═══════════════════════════════════════════════════════════════
 
 #include <Arduino.h>
@@ -877,8 +871,8 @@ body {
       <div class="form-section-label">⚡ Blink Wallet</div>
       <div style="display:flex;flex-direction:column;gap:10px;margin-top:10px">
         <div class="form-row">
-          <label class="form-label">Wallet ID</label>
-          <input class="form-input" id="f-walletid" type="text" placeholder="Your Blink wallet ID" autocomplete="off" spellcheck="false">
+          <label class="form-label">Wallet ID <span style="color:var(--orange);font-size:11px">(BTC wallet only — not USD)</span></label>
+          <input class="form-input" id="f-walletid" type="text" placeholder="xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" autocomplete="off" spellcheck="false">
         </div>
         <div class="form-row">
           <label class="form-label">API Key</label>
@@ -888,6 +882,18 @@ body {
           </div>
         </div>
       </div>
+    </div>
+    <div>
+      <div class="form-section-label">🪙 Coin Acceptor</div>
+      <div style="display:flex;flex-direction:column;gap:10px;margin-top:10px">
+        <div class="form-row">
+          <label class="form-label">Pulses per Euro <span style="color:var(--mid);font-size:11px">(match your HX-916 DIP switch setting)</span></label>
+          <input class="form-input" id="f-pulses" type="number" placeholder="10" min="1" max="100" value="10" autocomplete="off">
+        </div>
+      </div>
+    </div>
+    <div style="background:rgba(255,208,0,0.12);border:1px solid var(--yellow);border-radius:8px;padding:10px 12px;font-size:12px;color:var(--black);line-height:1.6;">
+      ⚡ <strong>After saving:</strong> ESP32 reboots and connects to WiFi. Then insert a coin when prompted in the Serial Monitor to complete coin polarity detection.
     </div>
     <div class="settings-status" id="settings-status">Enter credentials above to get started</div>
     <div class="btn-row">
@@ -977,10 +983,12 @@ function togglePw(id, btn) {
   btn.textContent = el.type === 'password' ? '👁' : '🙈';
 }
 async function saveSettings() {
-  const ssid     = document.getElementById('f-ssid').value.trim();
-  const password = document.getElementById('f-password').value;
-  const walletId = document.getElementById('f-walletid').value.trim();
-  const apiKey   = document.getElementById('f-apikey').value.trim();
+  const ssid       = document.getElementById('f-ssid').value.trim();
+  const password   = document.getElementById('f-password').value;
+  const walletId   = document.getElementById('f-walletid').value.trim();
+  const apiKey     = document.getElementById('f-apikey').value.trim();
+  const pulsesPerEur = parseInt(document.getElementById('f-pulses').value) || 10;
+
   if (!ssid || !walletId || !apiKey)
     return setStatus('fail', 'SSID, Wallet ID and API Key are required');
   const btn = document.getElementById('save-btn');
@@ -990,7 +998,7 @@ async function saveSettings() {
     const r = await fetch('/settings', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ ssid, password, walletId, apiKey })
+      body: JSON.stringify({ ssid, password, walletId, apiKey, pulsesPerEur })
     });
     const d = await r.json();
     if (d.success) {
@@ -1144,7 +1152,6 @@ setInterval(pollState, POLL_MS);
 </html>
 )rawhtml";
 
-// Returns UI HTML from PROGMEM as an Arduino String
 String getUI() {
   return String(FPSTR(UI_HTML));
 }
