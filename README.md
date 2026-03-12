@@ -1,4 +1,4 @@
-# ⚡ Sats ATM
+# Sats ATM
 
 
 ![SatsATM Logo](https://emerald-real-clownfish-172.mypinata.cloud/ipfs/bafkreibnfqjqom5cb5j6hae2ubfx37y2rf6iou2b7iuziwxymkkwkihnrq)
