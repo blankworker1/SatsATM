@@ -676,7 +676,7 @@ body {
 <div class="screen active" id="screen-idle">
   <div class="topbar">
     <div class="logo" id="logo-hold">
-      <span class="logo-bolt"><span class="logo-coin"><svg viewBox="0 0 24 36" fill="none" xmlns="http://www.w3.org/2000/svg"><polygon points="14,0 4,20 12,20 10,36 20,16 12,16" fill="var(--yellow)" stroke="var(--black)" stroke-width="1.2" stroke-linejoin="round"/></svg></span></span>
+      <span class="logo-bolt"><span class="logo-coin"><svg viewBox="0 0 24 36" fill="none" xmlns="http://www.w3.org/2000/svg"><polygon points="13.68,2.16 8.4,19.44 11.76,19.44 10.32,33.84 15.6,16.56 12.24,16.56" fill="var(--yellow)" stroke="var(--black)" stroke-width="1.2" stroke-linejoin="round"/></svg></span></span>
       SATS ATM
     </div>
     <div class="gauge-wrap">
@@ -702,7 +702,7 @@ body {
 <div class="screen" id="screen-coins">
   <div class="topbar">
     <div class="logo">
-      <span class="logo-bolt"><span class="logo-coin"><svg viewBox="0 0 24 36" fill="none" xmlns="http://www.w3.org/2000/svg"><polygon points="14,0 4,20 12,20 10,36 20,16 12,16" fill="var(--yellow)" stroke="var(--black)" stroke-width="1.2" stroke-linejoin="round"/></svg></span></span>
+      <span class="logo-bolt"><span class="logo-coin"><svg viewBox="0 0 24 36" fill="none" xmlns="http://www.w3.org/2000/svg"><polygon points="13.68,2.16 8.4,19.44 11.76,19.44 10.32,33.84 15.6,16.56 12.24,16.56" fill="var(--yellow)" stroke="var(--black)" stroke-width="1.2" stroke-linejoin="round"/></svg></span></span>
       SATS ATM
     </div>
     <div class="gauge-wrap">
@@ -758,7 +758,7 @@ body {
 <div class="screen" id="screen-sending">
   <div class="topbar">
     <div class="logo">
-      <span class="logo-bolt"><span class="logo-coin"><svg viewBox="0 0 24 36" fill="none" xmlns="http://www.w3.org/2000/svg"><polygon points="14,0 4,20 12,20 10,36 20,16 12,16" fill="var(--yellow)" stroke="var(--black)" stroke-width="1.2" stroke-linejoin="round"/></svg></span></span>
+      <span class="logo-bolt"><span class="logo-coin"><svg viewBox="0 0 24 36" fill="none" xmlns="http://www.w3.org/2000/svg"><polygon points="13.68,2.16 8.4,19.44 11.76,19.44 10.32,33.84 15.6,16.56 12.24,16.56" fill="var(--yellow)" stroke="var(--black)" stroke-width="1.2" stroke-linejoin="round"/></svg></span></span>
       SATS ATM
     </div>
     <div class="gauge-wrap">
@@ -788,7 +788,7 @@ body {
 <div class="screen" id="screen-success">
   <div class="topbar">
     <div class="logo">
-      <span class="logo-bolt"><span class="logo-coin"><svg viewBox="0 0 24 36" fill="none" xmlns="http://www.w3.org/2000/svg"><polygon points="14,0 4,20 12,20 10,36 20,16 12,16" fill="var(--yellow)" stroke="var(--black)" stroke-width="1.2" stroke-linejoin="round"/></svg></span></span>
+      <span class="logo-bolt"><span class="logo-coin"><svg viewBox="0 0 24 36" fill="none" xmlns="http://www.w3.org/2000/svg"><polygon points="13.68,2.16 8.4,19.44 11.76,19.44 10.32,33.84 15.6,16.56 12.24,16.56" fill="var(--yellow)" stroke="var(--black)" stroke-width="1.2" stroke-linejoin="round"/></svg></span></span>
       SATS ATM
     </div>
     <div class="gauge-wrap">

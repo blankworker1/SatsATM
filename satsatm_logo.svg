@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="500" height="500">
+
+  <!-- Yellow square background -->
+  <rect x="0" y="0" width="500" height="500" rx="80" ry="80" fill="#FFD000"/>
+
+  <!-- Silver coin circle -->
+  <circle cx="250" cy="250" r="190" fill="#C8C8C8" stroke="#0D0D0D" stroke-width="12"/>
+
+  <!-- Lightning bolt SVG path - centered, tips bleeding outside coin -->
+  <polygon
+    points="285,30  175,270  245,270  215,470  325,230  255,230"
+    fill="#FFD000"
+    stroke="#0D0D0D"
+    stroke-width="10"
+    stroke-linejoin="round"
+  />
+
+</svg>
